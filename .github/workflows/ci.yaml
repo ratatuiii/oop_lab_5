@@ -24,4 +24,5 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JAVA_FILE_NAME: checkstyle.xml
-
+      - name: Test with Maven
+        run: mvn -B package --file pom.xml
