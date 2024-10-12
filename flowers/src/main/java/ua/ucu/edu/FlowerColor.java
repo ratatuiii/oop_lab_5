@@ -8,16 +8,16 @@ public enum FlowerColor {
     BLUE("#0000FF"),
     ORANGE("#FFA500"),
     PURPLE("#800080"),
-    UNKNOWN("#000000");  // Default color if not specified
+    UNKNOWN("#000000");
 
     private final String hexCode;
 
-    // Constructor
+
     FlowerColor(String hexCode) {
         this.hexCode = hexCode;
     }
 
-    // Method to get hex code
+
     public String getHexCode() {
         return hexCode;
     }
