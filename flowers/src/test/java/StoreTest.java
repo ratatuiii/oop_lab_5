@@ -18,8 +18,8 @@ public class StoreTest {
     public void init() {
         flower = new Rose();
 
-        int newPrice = 10;
-        flower.setPrice(newPrice);
+        final int NEW_PRICE = 10;
+        flower.setPrice(NEW_PRICE);
         
         final int AMOUNT_ONE = 10;
         final int AMOUNT_TWO = 3;
