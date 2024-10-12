@@ -20,11 +20,12 @@ public class StoreTest {
 
         int newPrice = 10;
         flower.setPrice(newPrice);
+        
+        final int AMOUNT_ONE = 10;
+        final int AMOUNT_TWO = 3;
 
-        int newAmountOne = 5;
-        int newAmountTwo = 3;
-        flowerPackOne = new FlowerPack(flower, newAmountOne);
-        flowerPackTwo = new FlowerPack(new Chamomile(), newAmountTwo);
+        flowerPackOne = new FlowerPack(flower, AMOUNT_ONE);
+        flowerPackTwo = new FlowerPack(new Chamomile(), AMOUNT_TWO);
 
 
         store = new Store(new FlowerPack[]{flowerPackOne});
@@ -50,8 +51,8 @@ public class StoreTest {
 
     @Test
     public void testTotalPrice() {
-        int expectedValue = 50;
-        Assertions.assertEquals(expectedValue, store.totalPrice());
+        final int EXPECTED_VALUE = 10;
+        Assertions.assertEquals(EXPECTED_VALUE, store.totalPrice());
     }
 
     @Test
