@@ -24,23 +24,23 @@ public class Flower {
         return sepalLength;
     }
 
-    public void setSepalLength(double sepalLength) {
-        this.sepalLength = sepalLength;
+    public void setSepalLength(double newSepalLength) {
+        this.sepalLength = newSepalLength;
     }
 
     public String getColor() {
         return color.getHexCode();
     }
 
-    public void setColor(FlowerColor color) {
-        this.color = color;
+    public void setColor(FlowerColor newColor) {
+        this.color = newColor;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPrice(double newPrice) {
+        this.price = newPrice;
     }
 }

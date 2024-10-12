@@ -10,31 +10,36 @@ import org.junit.jupiter.api.Assertions;
 
 public class StoreTest {
     private Store store;
-    private FlowerPack flowerPack1;
-    private FlowerPack flowerPack2;
+    private FlowerPack flowerPackOne;
+    private FlowerPack flowerPackTwo;
     private Flower flower;
 
     @BeforeEach
     public void init() {
         flower = new Rose();
-        flower.setPrice(10);
-        flowerPack1 = new FlowerPack(flower, 5);
-        flowerPack2 = new FlowerPack(new Chamomile(), 3);
+
+        int newPrice = 10;
+        flower.setPrice(newPrice);
+
+        int newAmountOne = 5;
+        int newAmountTwo = 3;
+        flowerPackOne = new FlowerPack(flower, newAmountOne);
+        flowerPackTwo = new FlowerPack(new Chamomile(), newAmountTwo);
 
 
-        store = new Store(new FlowerPack[]{flowerPack1});
+        store = new Store(new FlowerPack[]{flowerPackOne});
     }
 
     @Test
     public void testAddPack() {
-        store.addPack(flowerPack2);
-        Assertions.assertTrue(store.isPackInInventory(flowerPack2));
+        store.addPack(flowerPackTwo);
+        Assertions.assertTrue(store.isPackInInventory(flowerPackTwo));
     }
 
     @Test
     public void testIsPackInInventory() {
-        Assertions.assertTrue(store.isPackInInventory(flowerPack1));
-        Assertions.assertFalse(store.isPackInInventory(flowerPack2));
+        Assertions.assertTrue(store.isPackInInventory(flowerPackOne));
+        Assertions.assertFalse(store.isPackInInventory(flowerPackTwo));
     }
 
     @Test
@@ -45,12 +50,13 @@ public class StoreTest {
 
     @Test
     public void testTotalPrice() {
-        Assertions.assertEquals(50, store.totalPrice());
+        int expectedValue = 50;
+        Assertions.assertEquals(expectedValue, store.totalPrice());
     }
 
     @Test
     public void testBuyPack() {
-        store.buyPack(flowerPack1);
-        Assertions.assertFalse(store.isPackInInventory(flowerPack1));
+        store.buyPack(flowerPackOne);
+        Assertions.assertFalse(store.isPackInInventory(flowerPackOne));
     }
 }

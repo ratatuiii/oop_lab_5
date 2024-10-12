@@ -4,7 +4,7 @@ public class Chamomile extends Flower {
     public Chamomile(double sepalLength, FlowerColor color, double price) {
         super(sepalLength, color, price);
     }
-    public Chamomile(){
+    public Chamomile() {
         super();
     }
 }
