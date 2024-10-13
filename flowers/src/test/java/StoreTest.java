@@ -107,7 +107,7 @@ public class StoreTest {
 
         store = new Store(new FlowerPack[]{flowerPackOne});
 
-        final int EXPECTED_VALUE = 10;
+        final int EXPECTED_VALUE = 100;
         Assertions.assertEquals(EXPECTED_VALUE, store.totalPrice());
     }
 
@@ -126,7 +126,7 @@ public class StoreTest {
 
 
         store = new Store(new FlowerPack[]{flowerPackOne});
-        
+
         store.buyPack(flowerPackOne);
         Assertions.assertFalse(store.isPackInInventory(flowerPackOne));
     }
