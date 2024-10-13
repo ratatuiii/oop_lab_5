@@ -23,6 +23,7 @@ public class FlowerBucketTest {
 
     @Test
     public void testPrice() {
+        flowerBucket = new FlowerBucket();
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         Flower flower = new Rose();
