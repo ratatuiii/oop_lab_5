@@ -21,6 +21,7 @@ public class FlowerTest {
 
     @Test
     public void testPrice() {
+        flower = new Flower();
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         flower.setPrice(price);
         Assertions.assertEquals(price, flower.getPrice());
@@ -28,6 +29,7 @@ public class FlowerTest {
 
     @Test
     public void testColor() {
+        flower = new Flower();
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
