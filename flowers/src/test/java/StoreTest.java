@@ -14,22 +14,6 @@ public class StoreTest {
     private FlowerPack flowerPackTwo;
     private Flower flower;
 
-    @BeforeEach
-    public void init() {
-        flower = new Rose();
-
-        final int NEW_PRICE = 10;
-        flower.setPrice(NEW_PRICE);
-        
-        final int AMOUNT_ONE = 10;
-        final int AMOUNT_TWO = 3;
-
-        flowerPackOne = new FlowerPack(flower, AMOUNT_ONE);
-        flowerPackTwo = new FlowerPack(new Chamomile(), AMOUNT_TWO);
-
-
-        store = new Store(new FlowerPack[]{flowerPackOne});
-    }
 
     @Test
     public void testAddPack() {
@@ -79,11 +63,8 @@ public class StoreTest {
         flower.setPrice(NEW_PRICE);
         
         final int AMOUNT_ONE = 10;
-        final int AMOUNT_TWO = 3;
 
         flowerPackOne = new FlowerPack(flower, AMOUNT_ONE);
-        flowerPackTwo = new FlowerPack(new Chamomile(), AMOUNT_TWO);
-
 
         store = new Store(new FlowerPack[]{flowerPackOne});
 
@@ -99,11 +80,7 @@ public class StoreTest {
         flower.setPrice(NEW_PRICE);
         
         final int AMOUNT_ONE = 10;
-        final int AMOUNT_TWO = 3;
-
         flowerPackOne = new FlowerPack(flower, AMOUNT_ONE);
-        flowerPackTwo = new FlowerPack(new Chamomile(), AMOUNT_TWO);
-
 
         store = new Store(new FlowerPack[]{flowerPackOne});
 
@@ -119,11 +96,7 @@ public class StoreTest {
         flower.setPrice(NEW_PRICE);
         
         final int AMOUNT_ONE = 10;
-        final int AMOUNT_TWO = 3;
-
         flowerPackOne = new FlowerPack(flower, AMOUNT_ONE);
-        flowerPackTwo = new FlowerPack(new Chamomile(), AMOUNT_TWO);
-
 
         store = new Store(new FlowerPack[]{flowerPackOne});
 

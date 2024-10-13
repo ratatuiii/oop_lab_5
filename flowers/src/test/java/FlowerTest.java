@@ -14,11 +14,6 @@ public class FlowerTest {
     private static final int MAX_PRICE = 100;
     private Flower flower;
 
-    @BeforeEach
-    public void init() {
-        flower = new Flower();
-    }
-
     @Test
     public void testPrice() {
         flower = new Flower();
