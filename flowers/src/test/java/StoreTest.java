@@ -4,7 +4,6 @@ import ua.ucu.edu.FlowerPack;
 import ua.ucu.edu.Rose;
 import ua.ucu.edu.Chamomile;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 

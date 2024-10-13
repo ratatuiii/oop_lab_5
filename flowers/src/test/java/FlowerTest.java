@@ -2,7 +2,6 @@
 import ua.ucu.edu.Flower;
 import ua.ucu.edu.FlowerColor;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
